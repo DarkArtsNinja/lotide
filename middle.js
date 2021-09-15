@@ -19,10 +19,26 @@ function assertArrayEqual(actual, expected){
   }
 }
 
-console.log(assertArrayEqual([1, 2, 3], [1, 2, 3])) // => true
-console.log(assertArrayEqual([1, 2, 3], [3, 2, 1])) // => false
+const middle = function (arr) {
+  switch (true) {
+    case (arr.length < 2):
+      return [];
 
-console.log(assertArrayEqual(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(assertArrayEqual(["1", "2", "3"], ["1", "2", 3])) // => false
+    case (arr.length % 2 === 0):
+      {
+        let arrayMid = ((arr.length / 2) - 1);
+        let newArray = [arr[arrayMid], arr[arrayMid + 1]];
 
-// assertEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS
+        return newArray;
+      }
+    case (arr.length % 2 === 1):
+      {
+        let arrayMid = Math.floor((arr.length / 2));
+        let newArray = [arr[arrayMid]];
+        return newArray;
+      }
+  }
+}
+
+console.log(assertArrayEqual(middle([1, 2, 3, 4, 5]), [3]) );
+console.log(middle([1, 2, 3, 4, 5, 6]));
