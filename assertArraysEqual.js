@@ -25,4 +25,5 @@ console.log(assertArrayEqual([1, 2, 3], [3, 2, 1])) // => false
 console.log(assertArrayEqual(["1", "2", "3"], ["1", "2", "3"])) // => true
 console.log(assertArrayEqual(["1", "2", "3"], ["1", "2", 3])) // => false
 
+module.exports = assertArrayEqual;
 // assertEqual(([1, 2, 3], [1, 2, 3]), true); // => should PASS

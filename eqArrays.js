@@ -29,6 +29,8 @@ function eqArrays(arr1, arr2){
   }
 }
 
+module.exports = eqArrays;
+
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
 // assertEqual(tail(["Hello", "Lighthouse", "Labs"]), ("Lighthouse", "Labs"));
